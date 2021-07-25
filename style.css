@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box
+}
+body {
+    font-family: Roboto, sans-serif;
+    margin:0;
+    background-color: rgb(238, 229, 229);
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* content
+----------------------------------------- */
+.content {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top:  100px;
+}
+/* pre and next btn 
+------------------------------------------*/
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 15px;
+    color: white;
+    opacity: .3;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.5s;
+    border-radius: 0 2px 2px 0;
+}
+.next {
+    position: absolute;
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, .15);  
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+}
+/* numbertext
+--------------------------------------------------- */
+.numbertext{
+    color: white;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 12px;
+    opacity: .5;
+}
+/* dot 
+---------------------------------------------------*/
+.dot-content{
+    position: absolute;
+    left: 50%;
+    top: 94%;
+    transform: translate(-50%,-50%);
+}
+.dot{
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #bbb;
+    opacity: .2;
+    transition: opacity 0.6s ease;
+}
+.active, .dot:hover {
+    opacity: .6;
+}
+/* smaller screens 
+----------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
