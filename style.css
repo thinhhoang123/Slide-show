@@ -45,13 +45,25 @@ img {
 }
 /* numbertext
 --------------------------------------------------- */
-.numbertext{
+#numbertext{
     color: white;
     position: absolute;
     top: 1%;
     left: 1%;
     font-size: 12px;
     opacity: .5;
+}
+/* caption
+-------------------------------------------------- */
+.text{
+    position: absolute;
+    top: 93%;
+    left: 3%;
+    color: #bbb;
+    opacity: .5;
+}
+.text:hover{
+    opacity: 1;
 }
 /* dot 
 ---------------------------------------------------*/

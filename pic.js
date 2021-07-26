@@ -1,9 +1,9 @@
 var slideIndex = 1;
 var slides = document.querySelectorAll(".Slides");
 var dots = document.querySelectorAll(".dot");
+var numbertext = document.querySelector("#numbertext");
 
 showSlides(slideIndex);
-
 //prev and next
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -12,7 +12,6 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
     if (n > slides.length) {
         slideIndex = 1;
@@ -26,6 +25,8 @@ function showSlides(n) {
     for (var i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+    
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+    numbertext.innerHTML = `${slideIndex} / ${slides.length}`;
 }
